@@ -1,3 +1,5 @@
+import { header } from "../components/header.js";
+header ();
 const h1DOM = document.querySelector('h1');
 const titleDOM = document.querySelector('title')
 const pDOM = document.querySelector('p')

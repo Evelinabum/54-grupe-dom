@@ -6,11 +6,11 @@ export function header() {
         { text: 'Darzas', href: '/darzas' },
         { text: 'Header', href: '/header' },
     ];
-
-    console.log(location.pathname);
-
-    const currentPage = location.pathname;
+    const lp = location.pathname;
+    const currentPage = lp.length > 1 && lp.at(-1) === '/'
+     ? lp.slice(0, -1) : lp;
     let linksHTML = '';
+
     for (const link of menu) {
         let activePage = '';
         if(link.href === currentPage) {

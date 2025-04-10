@@ -1,4 +1,5 @@
-import { header } from "../components/header.js";
+import { header } from '../components/header.js';
+
 header();
 
 console.log('home');
@@ -20,6 +21,8 @@ console.log(liDOM3);
 
 console.log(liDOM2[1]);
 
+console.clear();
+
 const titleDOM = document.getElementById('title');
 console.log(titleDOM);
 console.log([titleDOM]);
@@ -39,6 +42,7 @@ console.log(itemDOM1);
 const itemDOM2 = listDOM[1].getElementsByClassName('item');
 console.log(itemDOM2);
 
+console.clear();
 
 const pomidorasDOM = document
     .querySelector('.list:nth-of-type(2) .item:nth-child(2)');
@@ -46,5 +50,4 @@ console.log(pomidorasDOM);
 
 const darzovesDOM = document
     .querySelectorAll('.list:nth-of-type(1) > .item');
-
-
+console.log(darzovesDOM);

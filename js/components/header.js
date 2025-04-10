@@ -1,10 +1,8 @@
 export function header() {
-    
-if (location.hostname !== 'localhost') {
-    const base ='https://github.com/Evelinabum/54-grupe-dom';
-    document.head.insertAdjacentHTML('afterbegin', '<base href="https://github.com/Evelinabum/54-grupe-dom">');
-}
-
+    if (location.hostname !== 'localhost') {
+        const base = 'https://github.com/Evelinabum/54-grupe-dom/';
+        document.head.insertAdjacentHTML('afterbegin', `<base href="${base}">`);
+    }
 
     const menu = [
         { text: 'Home', href: '/' },
@@ -13,19 +11,19 @@ if (location.hostname !== 'localhost') {
         { text: 'Darzas', href: '/darzas' },
         { text: 'Header', href: '/header' },
         { text: 'Click', href: '/click' },
-
     ];
+
     const lp = location.pathname;
-    const currentPage = lp.length > 1 && lp.at(-1) === '/'
-     ? lp.slice(0, -1) : lp;
+    const currentPage = lp.length > 1 && lp.at(-1) === '/' ? lp.slice(0, -1) : lp;
     let linksHTML = '';
 
     for (const link of menu) {
         let activePage = '';
-        if(link.href === currentPage) {
+        if (link.href === currentPage) {
             activePage = 'active';
         }
-        linksHTML += `<a class="link" href="${base + link.href}">${link.text}</a>`;
+
+        linksHTML += `<a class="link ${activePage}" href="${link.href}">${link.text}</a>`;
     }
 
     const HTML = `

@@ -1,11 +1,10 @@
 export function header() {
-    let base = 'http://localhost:5408';
+    let base = 'http://localhost:5408/';
     if (location.hostname !== 'localhost') {
         const base = 'https:///Evelinabum.github.io/54-grupe-dom/';
     }
         document.head.insertAdjacentHTML('afterbegin', `<base href="${base}">`);
     
-
     const menu = [
         { text: 'Home', href: './' },
         { text: 'Text', href: './text/' },

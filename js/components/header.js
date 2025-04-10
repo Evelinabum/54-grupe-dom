@@ -1,30 +1,29 @@
 export function header() {
     let base = 'http://localhost:5408/';
+    let projectName = '';
     if (location.hostname !== 'localhost') {
-        const base = 'https://Evelinabum.github.io/54-grupe-dom/';
+        const base = 'https://evelinabum.github.io/54-grupe-dom/';
     }
-        document.head.insertAdjacentHTML('afterbegin', `<base href="${base}">`);
-    
+    document.head.insertAdjacentHTML('afterbegin', `<base href="${base}">`);
+
     const menu = [
-        { text: 'Home', href: './' },
-        { text: 'Text', href: './text/' },
-        { text: 'Food', href: './food/' },
-        { text: 'Darzas', href: './darzas/' },
-        { text: 'Header', href: './header/' },
-        { text: 'Click', href: './click/' },
+        { text: 'Home', href: '/' },
+        { text: 'Text', href: '/text/' },
+        { text: 'Food', href: '/food/' },
+        { text: 'Darzas', href: '/darzas/' },
+        { text: 'Header', href: '/header/' },
+        { text: 'Click', href: '/click/' },
     ];
 
-    const lp = location.pathname;
-    const currentPage = lp.length > 1 && lp.at(-1) === '/' ? lp.slice(0, -1) : lp;
     let linksHTML = '';
 
     for (const link of menu) {
         let activePage = '';
-        if (link.href === currentPage) {
+        if (projectName + link.href === location.pathname) {
             activePage = 'active';
         }
 
-        linksHTML += `<a class="link ${activePage}" href="${link.href}">${link.text}</a>`;
+        linksHTML += `<a class="link ${activePage}" href=".${link.href}">${link.text}</a>`;
     }
 
     const HTML = `

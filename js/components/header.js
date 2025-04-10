@@ -3,7 +3,7 @@ export function header() {
         let projectName = '';
         if (location.hostname !== 'localhost') {
             projectName = '/54-grupe-dom';
-    base = 'https://evelinabum.github.io/54-grupe-dom/';
+            base = 'https://evelinabum.github.io/54-grupe-dom/';
             
         }
         document.head.insertAdjacentHTML('afterbegin', `<base href="${base}">`);

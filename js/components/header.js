@@ -1,16 +1,18 @@
 export function header() {
+    let base = 'http://localhost:5408';
     if (location.hostname !== 'localhost') {
-        const base = 'https://github.com/Evelinabum.github.io/54-grupe-dom/';
-        document.head.insertAdjacentHTML('afterbegin', `<base href="${base}">`);
+        const base = 'https:///Evelinabum.github.io/54-grupe-dom/';
     }
+        document.head.insertAdjacentHTML('afterbegin', `<base href="${base}">`);
+    
 
     const menu = [
         { text: 'Home', href: './' },
-        { text: 'Text', href: './text' },
-        { text: 'Food', href: './food' },
-        { text: 'Darzas', href: './darzas' },
-        { text: 'Header', href: './header' },
-        { text: 'Click', href: './click' },
+        { text: 'Text', href: './text/' },
+        { text: 'Food', href: './food/' },
+        { text: 'Darzas', href: './darzas/' },
+        { text: 'Header', href: './header/' },
+        { text: 'Click', href: './click/' },
     ];
 
     const lp = location.pathname;

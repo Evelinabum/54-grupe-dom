@@ -1,4 +1,11 @@
 export function header() {
+    
+if (location.hostname !== 'localhost') {
+    const base ='https://github.com/Evelinabum/54-grupe-dom';
+    document.head.insertAdjacentHTML('afterbegin', '<base href="https://github.com/Evelinabum/54-grupe-dom">');
+}
+
+
     const menu = [
         { text: 'Home', href: '/' },
         { text: 'Text', href: '/text' },
@@ -18,12 +25,12 @@ export function header() {
         if(link.href === currentPage) {
             activePage = 'active';
         }
-        linksHTML += `<a class="link" href="${link.href}">${link.text}</a>`;
+        linksHTML += `<a class="link" href="${base + link.href}">${link.text}</a>`;
     }
 
     const HTML = `
         <header class="main-header">
-            <img class="logo" src="../food/pizza.png" alt="Logo">
+            <img class="logo" src="./img/logo.png" alt="Logo">
             <nav class="main-nav">${linksHTML}</nav>
         </header>`;
 
